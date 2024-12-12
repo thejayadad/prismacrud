@@ -64,15 +64,17 @@ const Clientform = () => {
 
             {/* Total Input */}
             <div>
-                <input
-                    id="total"
-                    name="total"
-                    placeholder="Total..."
-                    type="number"
-                    className={`border ${getFieldError("total") ? 'border-red-500' : 'border-gray-300'} rounded p-2`}
-                    aria-invalid={!!getFieldError("total")}
-                    aria-describedby="total-error"
-                />
+            <input
+    id="total"
+    name="total"
+    placeholder="Total..."
+    type="number"
+    step="any"
+    className={`border ${getFieldError("total") ? 'border-red-500' : 'border-gray-300'} rounded p-2`}
+    aria-invalid={!!getFieldError("total")}
+    aria-describedby="total-error"
+/>
+
                 <div id="total-error" aria-live="polite">
                     {getFieldError("total") && (
                         <p className="text-sm text-red-500 mt-2">{getFieldError("total")}</p>
